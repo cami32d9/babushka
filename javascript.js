@@ -34,12 +34,7 @@ function start() {
 function dishesByCategory(category) {
     menu.innerHTML = "";
 
-    if (category == "all") {
-        filtered = dishes;
-    }
-    else {
-        filtered = dishes.filter(dish => dish.kategori === category);
-    }
+        filtered = dishes.filter(dish => category === "all" || dish.kategori === category);
 
     filtered.forEach(dish => {
         let template =
